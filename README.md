@@ -1,6 +1,8 @@
-# Nuxt 3 Minimal Starter
+# Vue School corporate training landing page built in Nuxt 3
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
+![Landing page preview](landing-page-preview.png)
 
 ## Setup
 
