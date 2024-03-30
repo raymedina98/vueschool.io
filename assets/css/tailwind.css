@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark bg-[url('/assets/img/sm-background-pattern-top.svg'),_url('/assets/img/sm-background-pattern-bottom.svg')] bg-[100%_auto] bg-[position:50%_50rem,50%_125rem] bg-no-repeat font-rubik md:bg-[position:50%_69rem,50%_155rem] lg:bg-[url('/assets/img/lg-background-pattern-top.svg'),_url('/assets/img/lg-background-pattern-bottom.svg')] lg:bg-[position:50%_42rem,50%_52%];
+  }
+  @font-face {
+    font-family: 'Circular Std';
+    font-weight: 700;
+    font-display: swap;
+    src: url(/assets/fonts/circular-std-bold.ttf) format('truetype');
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply relative mx-auto max-w-[21.56rem] md:max-w-[43rem] lg:max-w-[73rem];
+  }
+  .btn {
+    @apply flex flex-row items-center justify-center rounded-[10px] px-10 py-5 font-medium hover:opacity-75;
+  }
+  .btn--primary {
+    @apply bg-primary text-dark;
+  }
+}
+
+@layer utilities {
+  .section-container-spacing {
+    @apply mt-[7.5rem] md:mt-[8.75rem];
+  }
+  .text-heading-1 {
+    @apply text-[2.5rem] font-bold leading-[3rem] text-white md:text-6xl md:leading-[4.43rem];
+  }
+  .card-gradient-border {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    @apply rounded-[30px] p-[1px];
+  }
+  .gradient-text {
+    @apply inline-block bg-gradient-to-r bg-clip-text text-transparent;
+  }
+  .gradient-text--primary {
+    @apply from-[#0BD88F] to-[#00F0FF];
+  }
+  .gradient-text--secondary {
+    @apply from-[#0CD890] to-[#01F0FD];
+  }
+  .hide-scrollbar {
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .footer-logo-wrapper {
+    @apply flex size-[3.75rem] items-center justify-center rounded-full bg-[#2B2F44] text-[#797B88];
+  }
+}
