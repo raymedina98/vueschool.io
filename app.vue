@@ -28,13 +28,13 @@ useHead({
 
 useSeoMeta({
   title: 'Vue School corporate training | The #1 training resource for Vue.js',
-  ogTitle:
-    'Vue School corporate training | The #1 training resource for Vue.js',
-  description:
-    'Training solutions designed for companies, agencies and organisations with developers using or who are considering using the Vue.js framework',
-  ogDescription:
-    'Training solutions designed for companies, agencies and organisations with developers using or who are considering using the Vue.js framework',
-  twitterCard: 'summary_large_image'
+  description: `Training solutions designed for companies, agencies and organisations with developers using or who are considering using the Vue.js framework`,
+  ogTitle: `Vue School corporate training | The #1 training resource for Vue.js`,
+  ogDescription: `Training solutions designed for companies, agencies and organisations with developers using or who are considering using the Vue.js framework`,
+  ogImage: 'https://vueschool-training.vercel.app/landing-page-preview.png',
+  twitterCard: 'summary_large_image',
+  twitterDescription: `Training solutions designed for companies, agencies and organisations with developers using or who are considering using the Vue.js framework`,
+  twitterImage: 'https://vueschool-training.vercel.app/landing-page-preview.png'
 })
 </script>
 

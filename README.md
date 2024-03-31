@@ -2,7 +2,7 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-![Landing page preview](landing-page-preview.png)
+![Landing page preview](public/landing-page-preview.png)
 
 ## Setup
 
