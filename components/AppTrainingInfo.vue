@@ -1,4 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+type Training = {
+  videoLessons?: number
+  courses?: number
+  hours?: number
+}
+const query = groq`*[_type == "training"]{
+  videoLessons,
+  courses,
+  hours
+} | order(_createdAt desc)[0]`
+const { data: training } = await useSanityQuery<Training>(query)
+</script>
 
 <template>
   <section
@@ -19,7 +31,7 @@
       <div class="flex flex-col">
         <span
           class="gradient-text gradient-text--primary text-[4rem] font-medium md:text-[5.3rem]"
-          >763</span
+          >{{ training?.videoLessons || '763' }}</span
         >
         <div class="flex flex-row items-center justify-center space-x-2">
           <Icon name="icon-park-solid:play" class="size-5" />
@@ -29,7 +41,7 @@
       <div class="flex flex-col">
         <span
           class="gradient-text gradient-text--primary text-[4rem] font-medium md:text-[5.3rem]"
-          >40</span
+          >{{ training?.courses || '40' }}</span
         >
         <div class="flex flex-row items-center justify-center space-x-2">
           <Icon name="ri:book-3-fill" class="size-5" />
@@ -39,11 +51,11 @@
       <div class="flex flex-col">
         <span
           class="gradient-text gradient-text--primary text-[4rem] font-medium md:text-[5.3rem]"
-          >64</span
+          >{{ training?.hours || '64' }}</span
         >
         <div class="flex flex-row items-center justify-center space-x-2">
           <Icon name="mdi:clock-time-three" class="size-5" />
-          <span class="text-sm">15 Hours</span>
+          <span class="text-sm">{{ `${training?.hours || 64} Hours` }}</span>
         </div>
       </div>
     </div>

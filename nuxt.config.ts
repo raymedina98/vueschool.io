@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/sanity',
     'nuxt-icon'
   ],
   googleFonts: {
@@ -12,5 +13,13 @@ export default defineNuxtConfig({
       Inter: [400]
     },
     display: 'swap'
+  },
+  sanity: {
+    projectId: process.env.NUXT_SANITY_PROJECT_ID,
+    dataset: process.env.NUXT_SANITY_DATASET,
+    visualEditing: {
+      studioUrl: process.env.NUXT_SANITY_STUDIO_URL || 'http://localhost:3333',
+      stega: true
+    }
   }
 })

@@ -4,7 +4,7 @@ withDefaults(
     name?: string
     icon?: 'LeafIcon' | 'RocketLaunchIcon' | 'BoltIcon'
     course?: string
-    planBenefits?: { name: string; isActive: boolean }[]
+    planBenefits?: { _id?: string; name: string; isActive: boolean }[] | null
   }>(),
   {
     name: 'Basic',
@@ -48,8 +48,8 @@ withDefaults(
       >
       <ul class="mb-6 space-y-3">
         <li
-          v-for="benefit in planBenefits"
-          :key="benefit.name"
+          v-for="(benefit, index) in planBenefits"
+          :key="benefit._id || index"
           :class="[
             'flex flex-row items-center justify-between',
             { 'opacity-25': !benefit.isActive }
